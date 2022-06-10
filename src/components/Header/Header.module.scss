@@ -1,0 +1,24 @@
+.header{
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+  
+
+}
+
+.menuIcon{
+    img{
+        cursor: pointer;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .header{
+        div:nth-child(2){
+            width: fit-content !important;
+        }
+    }
+}
