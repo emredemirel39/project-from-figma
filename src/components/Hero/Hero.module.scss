@@ -124,7 +124,7 @@
 
     .firstBall{
         //($bgSize, $coloredBallSize, $ballColor, $emptyBallSize, $emptyBallBorderColor, $mTop, $mLeft)
-        @include ballMixin (138px, 125px,  $greenBallColor, 115px, #B0A9A9, -12px, -26px);
+        @include ballMixin (138px, 125px,  $lightGreen, 115px, #B0A9A9, -12px, -26px);
         position: relative;
         margin-right: 100px;
         margin-top: 45px

@@ -1,0 +1,51 @@
+@import '../../styles/colors';
+
+.heroBottom{
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightGrey;
+    margin-top: 28px;
+    height: 85px;
+
+    p {
+        direction: rtl;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        text-align: right;
+        color: #3C3B3B;
+    }
+
+    button{
+        direction: rtl;
+        border: none;
+        outline: none;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        text-align: right;
+        cursor: pointer;
+        
+    }
+
+    button:first-child{
+        background-color: $darkGreen;
+        width: 100px;
+        color: #030629;
+
+    }
+
+    button:nth-child(2){
+        background-color: $lightGreen;
+        width: 66px;
+        color: #030629;
+
+    }
+}
+
