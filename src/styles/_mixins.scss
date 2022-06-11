@@ -1,0 +1,53 @@
+@mixin videoCallBtnMixin($bgColor, $width, $height, $textMarginLeft) {
+    display: flex;
+    padding-left: 41px;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    
+    div{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: $width;
+        height: $height;
+        background-color: $bgColor;
+
+        p{
+            margin-left: $textMarginLeft;
+            color: #FFFFFF;
+            direction: rtl;
+        }
+        
+        img{
+            margin-left: -41px;
+                
+        }
+    }
+}
+
+@mixin ballMixin ($bgSize, $coloredBallSize, $ballColor, $emptyBallSize, $emptyBallBorderColor, $mTop, $mLeft) {
+    display: flex;
+    justify-content: center;
+    width: $bgSize;
+    height: $bgSize;
+
+    div:first-child{
+
+        width: $coloredBallSize;
+        height: $coloredBallSize;
+        border-radius: 50%;
+        background-color: $ballColor;
+        
+    }
+
+    div:last-child{
+        width: $emptyBallSize;
+        height: $emptyBallSize;
+        border-radius: 50%;
+        border: 1px solid $emptyBallBorderColor;
+        position: absolute;
+        margin-top: $mTop;
+        margin-left: $mLeft;
+    }
+}

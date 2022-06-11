@@ -1,10 +1,12 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
 .header{
     width: 100%;
     padding: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   
 
 }
@@ -15,10 +17,35 @@
     }
 }
 
-@media only screen and (min-width: 992px) {
+.videoCallBtn{
+    display: none;
+}
+
+@media only screen and (min-width: 1200px) {
     .header{
+        background-color: $blueishGrey;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
         div:nth-child(2){
             width: fit-content !important;
         }
     }
+    .menuIcon{
+        display: none;
+    }
+
+    .logoBox{
+        z-index: 2;
+    }
+
+    .videoCallBtn{
+        display: block;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 17px;
+        text-align: right;
+        @include videoCallBtnMixin ($darkBlue, 200px, 50px, 14px)
+    }
+
 }
