@@ -42,10 +42,10 @@
     .videoCallBtn{
         display: block;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 300;
         font-size: 17px;
         text-align: right;
-        @include videoCallBtnMixin ($darkBlue, 200px, 50px, 14px)
+        @include videoCallBtnMixin ($darkBlue, 200px, 50px, 18px)
     }
 
 }
