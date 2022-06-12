@@ -3,6 +3,7 @@ import styles from './MainPage.module.scss';
 import Hero from '../../components/Hero'
 import HeroBottom from '../../components/HeroBottom'
 import StageSection from '../../components/StageSection'
+import DialogueSection from '../../components/DialogueSection';
 
 
 const MainPage = () => {
@@ -11,6 +12,7 @@ const MainPage = () => {
       <Hero/>
       <HeroBottom/>
       <StageSection/>
+      <DialogueSection/>
     </div>
   )
 }

@@ -1,0 +1,125 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.dialogueSection{
+    padding: 40px 44px;
+    background-color: $darkBlue;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //z-index: 3;
+}
+
+.textBox{
+    direction: rtl;
+    text-align: right;
+    margin-bottom: 36px;
+
+    h1{
+        text-align: right;
+        direction: ltr !important;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 42px;
+        
+    }
+
+    p{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        
+    }
+
+    span{
+        color: $lightGreen;
+    }
+
+}
+
+.dialogueScreenShot{
+
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    align-items: center;
+
+    img{
+        position: relative;
+        z-index: 1;
+        width: 234px;
+    }
+
+    img:nth-child(1), img:nth-child(3){
+        margin-left: -80px;
+    }
+
+    img:nth-child(2), img:nth-child(4){
+        margin-right: -80px;
+    }
+}
+
+.dialogueSectionBg{
+    position: absolute;
+    top: 1880px;
+    margin-left: -23%;
+    z-index: 0 !important;
+}
+
+.dialogueSectionBgDesktop{
+    display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .dialogueSection{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+
+    }
+
+    .dialogueScreenShot{
+        gap: 38px;
+    }
+
+    .ball{
+        //($bgSize, $coloredBallSize, $ballColor, $emptyBallSize, $emptyBallBorderColor, $mTop, $mLeft)
+        @include ballMixin (50px, 50px, $lightGreen, 46px, black, 0px, -20px);
+        position: absolute;
+        margin-top: 450px;
+        margin-right: 245px;
+    }
+
+    .textBox{
+        h1{
+            font-style: normal;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 73px;
+            
+        }
+    
+        p{
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 29px;
+            
+        }
+    }
+
+    .dialogueSectionBg{
+        display: none;
+    }
+
+    .dialogueSectionBgDesktop{
+        display: block;
+        position: absolute;
+        top: 1070px;
+        margin-left: -37%;
+        z-index: 0 !important;
+    }
+}
