@@ -10,3 +10,17 @@
 body{
     width: 100vw;
 }
+
+.no-mobile{
+    display: none;
+
+    @media only screen and (min-width: 1200px) {
+        display: block;
+    }
+}
+
+.no-desktop{
+    @media only screen and (min-width: 1200px)  {
+        display: none;
+    }
+}
