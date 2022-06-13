@@ -5,7 +5,7 @@ const CalendlyWidget = () => {
 
   return (
     <div className={styles.calendlyWidget}>
-        <InlineWidget url='https://calendly.com/emredemirel39/demo-clone' />
+        <InlineWidget styles={{height: '100%', width: '100%'}} url='https://calendly.com/emredemirel39/demo-clone' />
     </div>
   )
 }

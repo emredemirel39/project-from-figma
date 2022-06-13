@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import MainPage from "./views/MainPage";
 
 import './styles/main.scss';
+import HowWorksPage from "./views/HowWorksPage";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<MainPage/>}/>
+          <Route path="how-works" element={<HowWorksPage/>} />
         </Routes>
       </main>
       <Footer/>
