@@ -5,12 +5,13 @@ import menuIcon from '../../assets/icons/menu-icon.png';
 import styles from './Header.module.scss';
 import Navbar from '../Navbar';
 import VideoCallBtn from '../VideoCallBtn';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
     <header className={styles.header}>
-        <div className={styles.logoBox}>
-            <img src={logo} alt="logo" />
+        <div className={styles.logoBox}> 
+            <NavLink to='/'><img src={logo} alt="logo" /></NavLink>
         </div>
         <Navbar/>
         <div className={styles.menuIcon}>

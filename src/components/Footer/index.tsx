@@ -22,10 +22,10 @@ const Footer
                 </div>
                 <div className={`${styles.footerNav} no-mobile`}>
                     <h4>חוקלל עדימ</h4>
-                    <NavLink to="#">?דבוע הז ךיא</NavLink>
-                    <NavLink to="#">תובושתו תולאש</NavLink>
-                    <NavLink to="#">תורבחל תוריש</NavLink>
-                    <NavLink to="#">רשק ורצ</NavLink>
+                    <NavLink to="/how-works">?דבוע הז ךיא</NavLink>
+                    <NavLink to="/FAQ">תובושתו תולאש</NavLink>
+                    <NavLink to="/companies">תורבחל תוריש</NavLink>
+                    <NavLink to="/contact">רשק ורצ</NavLink>
                 </div>
                 <div className={styles.footerIconWrapper}>
                     <div className={styles.logoBox}>

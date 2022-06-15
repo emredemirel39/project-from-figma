@@ -1,0 +1,314 @@
+@import '../../styles/colors';
+@import '../../styles/mixins';
+
+.howWorksPageWrapper{
+    min-height: 100vh;
+    width: 100vw;
+}
+
+// Hero 
+
+.howWorksHeroBgLines{
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 0;
+}
+
+.heroContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    padding: 46px 20px 76px 20px;
+    color: $darkBlue;
+
+    @media (min-width: 1200px) {
+        background-image: $blueishToLightGradientColor;
+        flex-direction: row;
+        justify-content: center;
+        gap: 80px;
+    }
+}
+
+.heroContainerInfoWrapper{
+    
+    div:first-child{
+        margin-bottom: 56px;
+    }
+
+    @media (min-width: 1200px) {
+        width: 40%;
+    }
+}
+
+.heroContainerTitle{
+
+    direction: rtl;
+    text-align: right;
+    h1{
+        
+        background-image: $greenBlueDarkBlueGradientColor;
+        text-transform: uppercase;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 42px;
+        line-height: 65px;
+    }
+
+}
+
+.heroContainerTextWrapper{
+    text-align: right;
+    direction: rtl;
+
+    p{ 
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 35px;
+
+        span{
+            color: $lightGreen;
+        }
+    }
+
+    p:first-child{
+        margin-bottom: 18px;
+    }
+}
+
+.heroContainerImageBox{
+    display: flex;
+    justify-content: center;
+
+    div{
+        position: absolute;
+        border: 1px solid #4E4E4E;
+        border-radius: 50%;
+        width: 327px;
+        height: 327px;
+        margin-left: -24px;
+        margin-top: -5px;
+        z-index: 0;
+
+        @media (min-width: 1200px) {
+            width: 520px;
+            height: 520px;
+            margin-left: -34px;
+        }
+        
+    }
+
+    img{
+        z-index: 1;
+        width: 310px;
+
+        @media (min-width: 1200px) {
+            width: 502px;
+        }
+    }
+}
+
+.heroBallBlue{
+            //($bgSize, $coloredBallSize, $ballColor, $emptyBallSize, $emptyBallBorderColor, $mTop, $mLeft)
+    @include ballMixin (62px, 62px,  $darkBlue, 58px, #FFFF, -3px, -6px);
+    position: absolute;
+    margin-top: 188px;
+    margin-left: -96%;
+}
+
+.heroBallEmpty{
+    width: 58px;
+    height: 58px;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    margin-top: 520px;
+    margin-left: -80%;
+}
+
+
+// video-call-section
+
+.videoCallSectionContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    background-color: $darkBlue;
+    padding: 50px 40px;
+    align-items: center;
+
+    @media (min-width: 1200px) {
+        
+        flex-direction: row;
+        justify-content: center;
+
+    }
+}
+
+.videoCallSectionImageBox{
+    width: 500px;
+}
+
+.videoCallInfo{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+
+    @media (min-width: 1200px) {
+        width: 700px;
+
+        h2{
+            margin-right: -200px;
+        }
+    }
+
+    
+
+    h2{
+        background-image: $greenBlueGradientColor;
+        text-transform: uppercase;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 59px;
+        direction: rtl;
+        text-align: right;
+
+        
+
+        
+    }
+
+    p{
+        color: white;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 35px;
+        margin-right: right;
+        text-align: right;
+        direction: rtl;
+
+        
+    }
+}
+
+.videoCallBtnWrapper{
+
+    display: block;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 17px;
+    text-align: right;
+    width: 100%;
+    z-index: 3;
+    @include videoCallBtnMixin ($shineBlue, 291px, 55px, 60px)
+
+}
+
+.videoCallSectionBgLines{
+    position: absolute;
+    left: 0;
+    margin-top: -260px;
+    z-index: 2;
+    
+    @media (min-width: 1200px) {
+        
+        all: unset;
+        position: absolute;
+        right: 0;
+        margin-top: -400px;
+    }
+}
+
+// commit section
+
+.commitSection{
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 55px;
+
+    @media (min-width: 1200px) {
+        background: linear-gradient(180deg, rgba(238, 242, 255, 0.04) 0%, #EEF2FF 45.79%, rgba(238, 242, 255, 0) 100%);
+        padding: 140px 0px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 50px;
+    }
+}
+
+.commitSectionInfoBox{
+    
+    h2{
+        font-style: normal;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 59px;
+        text-align: right;
+        direction: rtl;
+        color: $darkBlue;
+
+    }
+
+    p{
+        font-style: normal;
+        font-size: 20px;
+        line-height: 35px;
+        font-weight: 400;
+        color: $darkBlue;
+        text-align: right;
+        direction: rtl;
+        margin: 50px 0px;
+
+        b{
+            font-weight: 700;
+        }
+    }
+
+    @media (min-width: 1200px) {
+        width: 780px;
+
+        h2{
+            background-image: $greenBlueDarkBlueGradientColor;
+            text-transform: uppercase;
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            -webkit-text-fill-color: transparent; 
+            -moz-text-fill-color: transparent;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 73px;
+        }
+    }
+}
+
+.commitSectionImageBox{
+
+    display: flex;
+    justify-content: center;
+    img{
+        width: 306px;
+    }
+
+    div{
+        width: 280px;
+        height: 280px;
+        border: 1px solid #000000;
+        border-radius: 50%;
+        position: absolute;
+        margin-right: 114px;
+        margin-bottom: 30px;
+    }
+}

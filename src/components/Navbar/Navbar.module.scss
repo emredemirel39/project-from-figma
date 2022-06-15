@@ -79,6 +79,10 @@
                     font-family: $primaryFontFamily;
                     cursor: pointer;
                     text-align: right;
+
+                    a{
+                        all: inherit;
+                    }
                 }
             }
         }
