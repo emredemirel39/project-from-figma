@@ -1,0 +1,74 @@
+@import '../../styles/colors';
+
+.accordionItemWrapper{
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #FCFCFC;
+    border: 1px solid #E2E2E2;
+    ;
+
+    
+    @media (min-width: 1200px) {
+        padding: 22px 34px 22px 38px;
+    }
+}
+
+.accordionItemTitle{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: $darkBlue;
+
+    img{
+        transform: rotate(0deg);
+    }
+
+    h4{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 26px;
+        text-align: right;
+        direction: rtl;
+
+        @media (min-width: 1200px) {
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 35px;
+        }
+
+    }
+
+    
+}
+
+.accordionItemTextWrapper{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 8px;
+
+    @media (min-width: 1200px) {
+        margin-top: 12px;
+    }
+
+    p{
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 23px;
+        text-align: right;
+        direction: rtl;
+        width: 95%;
+
+        @media (min-width: 1200px) {
+            font-style: normal;
+            font-weight: 300;
+            font-size: 22px;
+            line-height: 35px;
+            width: 85%;
+        }
+    }
+}

@@ -53,9 +53,10 @@
     .calendlyWidgetContainer{
         display: flex;
         flex-direction: row-reverse;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 240px;
         align-items: flex-start;
-        padding-top: 95px;
+        padding: 95px 0px;
     }
     
     .calendlyWidgetWrapper{

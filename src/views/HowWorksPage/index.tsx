@@ -1,17 +1,52 @@
+// style
 import styles from './HowWorksPage.module.scss';
 
+//images
 import howWorksHeroImage from '../../assets/images/how-works-hero-image.png';
 import heroBgLines from '../../assets/images/hero-bg-lines.png';
 import videoCallSectionBgLines from '../../assets/images/videocall-section-bg-lines.png';
 import videoCallSectionImage from '../../assets/images/videocall-section-image.png';
 import commitSectionImage from '../../assets/images/hero-image.png';
 
+//Components
 import VideoCallBtn from '../../components/VideoCallBtn';
 import SecurityAndPrivacySection from '../../components/SecurityAndPrivacySection';
 import CalendlyWidget from '../../components/CalendlyWidget';
+import AccordionItem from '../../components/AccordionItem';
+
+//types
+import { IAccordionItem } from '../../types';
 
 
 const HowWorksPage = () => {
+
+  const accordionItems: IAccordionItem [] = [
+      {
+        id: 1,
+        title: '?טעפוצ עהלוק תילא גניסיפידא טמא טיס רולוד םוספיא םרול',
+        text: `Better הוקמה על ידי מומחי פיננסים וטכנולוגיה, כל אחד עם יותר מ-15 שנות ניסיון. אנחנו אלו שכל המשפחה והחברים פונים אליהם עם שאלות על הכסף - מה לעשות עם הפנסיה, האם למחזר את המשכנתא, איך להשקיע את הכסף וכו'. כל היום קיבלנו לוואטסאפ מכתבים מהבנק שחברים שלנו לא הבינו מה הם אומרים, שאלו אותנו מה לעשות כששער הדולר יורד או כשהאינפלציה עולה, ותמיד עזרנו לכולם על הדרך.
+בסוף נמאס לנו לעשות את זה בצורה ידנית והחלטנו להקים את Better. פיתחנו טכנולוגיה ייחודית שעושה את כל העבודה הזאת עבור הלקוחות שלנו, ככה שהם לא צריכים לעשות כלום.`
+      },
+      {
+        id: 2,
+        title: '?טעפוצ עהלוק תילא גניסיפידא טמא טיס רולוד םוספיא םרול',
+        text: `תימאהל ףונעו - קרלב ןוסמל טקפנ תפנב ,רילק ץפונומ קיטסאלב ופידוא .ףודומ רמב יזאווק ןמזווקא ,סיווק סיליסופ - ןאיפאס סוורא םולונ
+        ,לוהי קצבש םרול טרבוס ררפנומ רלוג .ךרונמ יאושנ ןיכטמל םכנמ ,אמ זד טיעכס קשהרק`
+      },
+      {
+        id: 3,
+        title: '?טעפוצ עהלוק תילא גניסיפידא טמא טיס רולוד םוספיא םרול',
+        text: `תימאהל ףונעו - קרלב ןוסמל טקפנ תפנב ,רילק ץפונומ קיטסאלב ופידוא .ףודומ רמב יזאווק ןמזווקא ,סיווק סיליסופ - ןאיפאס סוורא םולונ
+        ,לוהי קצבש םרול טרבוס ררפנומ רלוג .ךרונמ יאושנ ןיכטמל םכנמ ,אמ זד טיעכס קשהרק`
+      },
+      {
+        id: 4,
+        title: '?טעפוצ עהלוק תילא גניסיפידא טמא טיס רולוד םוספיא םרול',
+        text: `תימאהל ףונעו - קרלב ןוסמל טקפנ תפנב ,רילק ץפונומ קיטסאלב ופידוא .ףודומ רמב יזאווק ןמזווקא ,סיווק סיליסופ - ןאיפאס סוורא םולונ
+        ,לוהי קצבש םרול טרבוס ררפנומ רלוג .ךרונמ יאושנ ןיכטמל םכנמ ,אמ זד טיעכס קשהרק`
+      }
+  ]
+
   return (
     <div className={styles.howWorksPageWrapper}>
           <div className={`${styles.howWorksHeroBgLines} no-mobile`}>
@@ -96,6 +131,15 @@ const HowWorksPage = () => {
         <div className={styles.commitSectionImageBox}>
           <div></div>
           <img src={commitSectionImage} alt="commit-img" />
+        </div>
+      </div>
+
+      <div className={styles.accordionSection}>
+        <h2>תובושתו תולאש</h2>
+        <div className={styles.accordionWrapper}>
+          {
+            accordionItems.map(item => <AccordionItem key={item.id} item={item}/>)
+          }
         </div>
       </div>
 

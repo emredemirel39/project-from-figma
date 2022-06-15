@@ -22,11 +22,13 @@
 }
 
 @media only screen and (min-width: 1200px) {
+    
     .header{
         background-color: $blueishGrey;
         display: flex;
         flex-direction: row-reverse;
-        justify-content: space-around;
+        justify-content: center;
+        gap: 96px;
         div:nth-child(2){
             width: fit-content !important;
         }
