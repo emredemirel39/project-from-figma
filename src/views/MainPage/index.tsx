@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import styles from './MainPage.module.scss';
 import Hero from '../../components/Hero'
 import HeroBottom from '../../components/HeroBottom'
@@ -8,6 +8,11 @@ import CalendlyWidget from '../../components/CalendlyWidget';
 
 
 const MainPage = () => {
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0);
+  })
+
   return (
     <div className={styles.mainPage}>
       <Hero/>

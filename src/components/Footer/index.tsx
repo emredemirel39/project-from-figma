@@ -29,7 +29,9 @@ const Footer
                 </div>
                 <div className={styles.footerIconWrapper}>
                     <div className={styles.logoBox}>
-                        <img src={logo} alt="logo" />
+                        <NavLink to='/'>
+                            <img src={logo} alt="logo" />
+                        </NavLink>
                     </div>
                     <div className={`${styles.footerIconWrapperLinks} no-mobile`}>
                         <NavLink to="#">ונחנא ימ</NavLink>
@@ -44,9 +46,9 @@ const Footer
                 </div>
                 <ul>
                     <li><a href="mailto:support@allbetter.co.il">support@allbetter.co.il</a><span>•</span></li>
-                    <li><a href="">ופי-ביבא לת 32 ףוהנמז</a><span className='no-mobile'>•</span></li>
-                    <li><a href="">תויטרפ תוינידמ</a><span>•</span></li>
-                    <li><a href="">שומיש יאנת</a></li>
+                    <li><a href="#">ופי-ביבא לת 32 ףוהנמז</a><span className='no-mobile'>•</span></li>
+                    <li><a href="#">תויטרפ תוינידמ</a><span>•</span></li>
+                    <li><a href="#">שומיש יאנת</a></li>
                 </ul>
             </div>
         </div>
