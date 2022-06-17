@@ -1,0 +1,44 @@
+@import '../../styles/colors';
+
+.accordionSection{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 52px 30px;
+    gap: 40px;
+
+    h1{
+        background-image: $greenBlueGradientColor;
+        text-transform: uppercase;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        font-weight: 800;
+        font-size: 40px;
+        line-height: 59px;
+        text-align: right;
+        direction: rtl;
+
+        @media (min-width: 1200px) {
+            font-style: normal;
+            font-weight: 800;
+            font-size: 50px;
+            line-height: 73px;
+            margin-left: 50%;
+        }
+    }
+}
+
+.accordionWrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @media (min-width: 1200px) {
+        width: 90%;
+        max-width: 1377px;
+        align-items: center;
+    }
+}
