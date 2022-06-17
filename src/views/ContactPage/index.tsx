@@ -1,4 +1,6 @@
 import React, { useLayoutEffect } from 'react'
+import CalendlyWidget from '../../components/CalendlyWidget';
+import ContactForm from '../../components/ContactForm';
 
 const ContactPage = () => {
 
@@ -7,7 +9,10 @@ const ContactPage = () => {
   })
 
   return (
-    <div>ContactPage</div>
+    <div>
+      <ContactForm/>
+      <CalendlyWidget/>
+    </div>
   )
 }
 
