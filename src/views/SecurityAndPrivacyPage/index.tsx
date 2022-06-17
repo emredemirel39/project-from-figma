@@ -1,4 +1,6 @@
 import React, { useLayoutEffect } from 'react'
+import CalendlyWidget from '../../components/CalendlyWidget';
+import SecurityAndPrivacySection from '../../components/SecurityAndPrivacySection';
 
 const SecurityAndPrivacyPage = () => {
 
@@ -7,7 +9,10 @@ const SecurityAndPrivacyPage = () => {
   })
 
   return (
-    <div>SecurityAndPrivacyPage</div>
+    <div>
+      <SecurityAndPrivacySection/>
+      <CalendlyWidget/>
+    </div>
   )
 }
 
