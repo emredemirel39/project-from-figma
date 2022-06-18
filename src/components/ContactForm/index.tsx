@@ -21,7 +21,6 @@ const ContactForm = () => {
     };
 
     const [ form, setForm ] = useState <IFormState> (initialState);
-    const [ submit, setSubmit ] = useState <IFormState | null> (null);
     const [ isFormSent, setIsFormSent ] = useState <boolean> (false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -33,8 +32,16 @@ const ContactForm = () => {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
 
-        setSubmit(form)
-        setIsFormSent(true)
+        const israeliPhoneNumRegExp: RegExp = /^0(?:[234689]|5[0-689]|7[246789])(?![01])(\d{7})$/g;
+        const isPhoneNumValid: boolean = form.phoneNumber.match(israeliPhoneNumRegExp) !== null;
+        // example of phone number: 0547475720
+
+        const emailvalidationRegExp: RegExp = /\S+@\S+\.\S+/;
+        const isEmailValid: boolean = form.email.match(emailvalidationRegExp) !== null;        
+        
+        isEmailValid && isPhoneNumValid 
+        ? postMessages()
+        : window.alert('Form not correct!');
     }
 
     const autoGrow = (e: React.FormEvent<HTMLTextAreaElement | HTMLInputElement>) => {
@@ -43,7 +50,28 @@ const ContactForm = () => {
         e.currentTarget.style.height = (e.currentTarget.scrollHeight)+"px";
     }
 
-    console.log(submit);
+    const postMessages = async () => {
+
+        const messageBox = 'http://localhost:3004/messages';
+
+        try {
+            const request = await fetch(messageBox, {
+
+                method: 'POST',
+                headers:{ "Content-Type": "application/json"},
+                body: JSON.stringify(form)
+            });
+
+            //const response = await request.json();
+            //console.log(response);
+            
+            setIsFormSent(true);
+            
+            
+        } catch (error) {
+            window.alert('Error while sending data');
+        }
+    };
 
   return (
     <React.Fragment>
@@ -119,11 +147,11 @@ const ContactForm = () => {
             <div className={styles.emailPhoneWrapper}>
                 <div className={styles.inputBox}>
                     <label>מייל</label>
-                    <input onChange={e => handleChange(e)} name='email' type='email' />
+                    <input onChange={e => handleChange(e)} name='email' type='text' />
                 </div>
                 <div className={styles.inputBox}>
                     <label>טלפון</label>
-                    <input onChange={e => handleChange(e)} name='phone' type='tel' />
+                    <input onChange={e => handleChange(e)} name='phoneNumber' type='text' />
                 </div>
             </div>
 
