@@ -11,14 +11,20 @@ import './styles/main.scss';
 import FAQPage from "./views/FAQPage";
 import CompaniesPage from "./views/CompaniesPage";
 import SecurityAndPrivacyPage from "./views/SecurityAndPrivacyPage";
+import { useState } from "react";
+import MobileMenu from "./components/MobileMenu";
 
 
 
 function App() {
+
+  const [ mobileMenu, setMobileMenu ] = useState <boolean> (false);
+
   return (
     <div className="App">
-      <Header/>
-      <main>
+      <Header mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />
+      { mobileMenu && <MobileMenu mobileMenu={mobileMenu} setMobileMenu={setMobileMenu} />}
+      <main className={`${mobileMenu && 'no-mobile'}`}>
         <Routes>
           <Route path="/" element={<MainPage/>}/>
           <Route path="how-works" element={<HowWorksPage/>} />
@@ -29,7 +35,9 @@ function App() {
           <Route path="companies" element={<CompaniesPage/>} />
         </Routes>
       </main>
-      <Footer/>
+      <footer className={`${mobileMenu && 'no-mobile'}`}>
+        <Footer/>
+      </footer>
     </div>
   );
 }

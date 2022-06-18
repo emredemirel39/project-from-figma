@@ -6,7 +6,7 @@ import { NavLink } from 'react-router-dom';
 const Footer
  = () => {
   return (
-    <footer>
+    <div>
         <div className={styles.footerContainer}>
             <div className={styles.footerTop}>
                 <div className={`${styles.iconBox} no-mobile`}>
@@ -52,7 +52,7 @@ const Footer
                 </ul>
             </div>
         </div>
-    </footer>
+    </div>
   )
 }
 

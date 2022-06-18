@@ -1,7 +1,14 @@
 @import '../../styles/colors';
 @import '../../styles/mixins';
 
-.header{
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    flex-grow: 1;
+}
+
+.headerContainer{
     width: 100%;
     padding: 25px;
     display: flex;
@@ -23,7 +30,7 @@
 
 @media only screen and (min-width: 1200px) {
     
-    .header{
+    .headerContainer{
         background-color: $blueishGrey;
         display: flex;
         flex-direction: row-reverse;
