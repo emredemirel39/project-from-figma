@@ -1,6 +1,9 @@
 // packages
 import React, { useState } from 'react'
 
+//components
+import IconBox from '../IconBox';
+
 //styles
 import styles from './ContactForm.module.scss';
 
@@ -9,7 +12,6 @@ import contactFormImage from '../../assets/images/contact-form-image.png';
 
 // types
 import { IFormState } from '../../types';
-import IconBox from '../IconBox';
 
 const ContactForm = () => {
 
@@ -64,7 +66,7 @@ const ContactForm = () => {
 
             //const response = await request.json();
             //console.log(response);
-            
+
             setIsFormSent(true);
             
             
