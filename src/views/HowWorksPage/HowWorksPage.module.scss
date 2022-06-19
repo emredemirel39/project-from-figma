@@ -28,6 +28,7 @@
         flex-direction: row;
         justify-content: center;
         gap: 80px;
+        padding: 90px 0px 150px 0px;
     }
 }
 
@@ -116,10 +117,10 @@
 
 .heroBallBlue{
             //($bgSize, $coloredBallSize, $ballColor, $emptyBallSize, $emptyBallBorderColor, $mTop, $mLeft)
-    @include ballMixin (62px, 62px,  $darkBlue, 58px, #FFFF, -3px, -6px);
+    @include ballMixin (62px, 62px,  $darkBlue, 58px, #FFFF, -66px, -4px);
     position: absolute;
-    margin-top: 188px;
-    margin-left: -96%;
+    margin-top: 148px;
+    margin-left: -92%;
 }
 
 .heroBallEmpty{
@@ -128,8 +129,8 @@
     position: absolute;
     border-radius: 50%;
     border: 1px solid #000000;
-    margin-top: 520px;
-    margin-left: -80%;
+    margin-top: 490px;
+    margin-left: -85%;
 }
 
 
