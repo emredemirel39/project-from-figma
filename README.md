@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# A project from Figma
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Demo
+
+## Link of project
+
+[https://www.figma.com/file/ArUnrhjnuUJHBHFmdfzRYh/Better?node-id=290%3A625] (https://www.figma.com/file/ArUnrhjnuUJHBHFmdfzRYh/Better?node-id=290%3A625)
 
 ## Available Scripts
 
