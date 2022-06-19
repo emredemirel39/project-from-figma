@@ -1,10 +1,11 @@
 # A project from Figma
 
 ## Demo
+![project-from-figma-demo(1)](https://user-images.githubusercontent.com/100750565/174491647-e4ef58a4-2140-4ba7-a173-2e6fb3758358.gif)
 
 ## Link of project
 
-[https://www.figma.com/file/ArUnrhjnuUJHBHFmdfzRYh/Better?node-id=290%3A625] (https://www.figma.com/file/ArUnrhjnuUJHBHFmdfzRYh/Better?node-id=290%3A625)
+https://www.figma.com/file/ArUnrhjnuUJHBHFmdfzRYh/Better?node-id=290%3A625 
 
 ## Available Scripts
 
